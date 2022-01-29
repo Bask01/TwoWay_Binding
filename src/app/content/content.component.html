@@ -1,0 +1,36 @@
+<section class="gridArea">
+  <div class="info">
+    <p>Current Date : {{currentDate | date:'longDate'}}</p>
+    <p>My Name: {{contentInfo.name}}</p>
+    <p>My Sheridan Program: {{contentInfo.program}}</p>
+    <p>My Sheridan Email:{{contentInfo.email}}</p>
+    <img id="myimg" src="assets/images/{{contentInfo.picturename}}" width="70px">
+    <p style="color: deeppink;">Click a button to change img border style </p>
+ 
+
+  </div>
+  <div class="area1" [ngClass]="{fall:(season | uppercase) === 'FALL',
+                                winter:(season | uppercase) === 'WINTER',
+                                spring:(season | uppercase) === 'SPRING',
+                                summer:(season | uppercase) === 'SUMMER'}">
+
+    <h5>What season is your favorite? <br>Winter Spring Summer Fall</h5>
+       
+    <label><input [(ngModel)] = "season"></label>
+    <hr>
+    <p *ngIf="(season | uppercase) ==='FALL'; else mySeason"
+        [ngStyle]="{'font-weight': 'bold', 'font-size': '14px'}">
+              It is currently {{season}}, Next season is Winter
+    </p>
+    
+    <ng-template #mySeason>
+      <p  [ngStyle]="{'font-style': 'italic'}">I like {{season}} better...</p> 
+    </ng-template>
+
+  </div>
+  <div class="area2">
+  <p><button [ngStyle]="{color : 'purple'}" id="btn1" (click)="roundBorder()">Thick Solid Round Purple</button></p>
+  <p><button [ngStyle]="{'color' : 'HotPink'}" id="btn2" (click)="squareBorder()">Thick Double Square HotPink</button></p>
+ 
+  </div>
+</section>

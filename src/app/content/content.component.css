@@ -1,0 +1,34 @@
+.gridArea {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  grid-template-rows: auto;
+  grid-template-areas: "info area1" "info area2";
+  gap: 5px;
+  }
+  .info {grid-area: info; 
+    text-align: center; 
+    color: blueviolet; 
+    font-weight: bold;
+    font-size: 14px;
+    font-family:'Times New Roman';
+    background-color: #ddf8fc; }
+  .area1 {grid-area: area1; text-align: center;}
+
+  .area2 {grid-area: area2; text-align: left; background-color: rgb(244, 218, 250); text-align: center;}
+  
+    .winter {background-image: radial-gradient(circle,rgb(227, 236, 236) 0, 
+      rgb(76, 193, 247), 
+      rgb(8, 12, 248));}
+    .summer {background-image: radial-gradient(circle,rgb(227, 236, 236) 0, 
+      rgb(241, 243, 105), 
+      rgb(248, 244, 8));}
+    .spring {background-image: radial-gradient(circle,rgb(227, 236, 236) 0, 
+      rgb(153, 252, 150), 
+      rgb(64, 248, 8));}
+    .fall {background-image: radial-gradient(circle,rgb(227, 236, 236) 0, 
+      rgb(247, 187, 76), 
+      rgb(248, 124, 8));}
+
+  
+
+  
